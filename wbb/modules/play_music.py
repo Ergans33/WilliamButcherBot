@@ -12,28 +12,7 @@ from wbb import aiohttpsession as session
 from wbb import app, arq
 from wbb.core.decorators.errors import capture_err
 from wbb.utils.pastebin import paste
-
-from youtube_dl import YoutubeDL
-from youtube_dl.utils import (
-    ContentTooShortError,
-    DownloadError,
-    ExtractorError,
-    GeoRestrictedError,
-    MaxDownloadsReached,
-    PostProcessingError,
-    UnavailableVideoError,
-    XAttrMetadataError,
-)
-    
-try:
-
-    from youtubesearchpython import SearchVideos
-
-except:
-    os.system("pip install pip install youtube-search-python")
-    from youtubesearchpython import SearchVideos
-
-
+     
 @app.on_message(filters.command("/music") & ~filters.edited)
 @capture_err
 async def download_video(v_url):
