@@ -26,3 +26,8 @@ img2pdf
 telegraph
 pytube
 youtube-search-python==1.6.5
+instantmusic
+PyLyrics
+hachoir
+pybase64
+pySmartDL
