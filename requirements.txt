@@ -25,4 +25,4 @@ fuzzysearch
 img2pdf
 telegraph
 pytube
-youtube-search-python
+youtube-search-python==1.6.5
