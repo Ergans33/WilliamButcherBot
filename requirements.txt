@@ -25,7 +25,7 @@ fuzzysearch
 img2pdf
 telegraph
 pytube
-youtube-search-python==1.6.5
+youtube-search-python
 instantmusic
 PyLyrics
 hachoir
