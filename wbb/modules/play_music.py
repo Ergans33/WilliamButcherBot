@@ -30,7 +30,7 @@ try:
     from youtubesearchpython import SearchVideos
 
 except:
-    os.system("pip install pip install youtube-search-python==1.6.5")
+    os.system("pip install pip install youtube-search-python")
     from youtubesearchpython import SearchVideos
 
 
