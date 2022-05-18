@@ -1,10 +1,18 @@
-# Created by @p_rinc_e
-import asyncio
-import json
+import datetime
 import os
-import time
+from asyncio import get_running_loop
+from functools import partial
+from io import BytesIO
 
-from telethon.tl.types import DocumentAttributeAudio
+from pyrogram import filters
+from pytube import YouTube
+from requests import get
+
+from wbb import aiohttpsession as session
+from wbb import app, arq
+from wbb.core.decorators.errors import capture_err
+from wbb.utils.pastebin import paste
+
 from youtube_dl import YoutubeDL
 from youtube_dl.utils import (
     ContentTooShortError,
@@ -16,10 +24,7 @@ from youtube_dl.utils import (
     UnavailableVideoError,
     XAttrMetadataError,
 )
-
-from wbb.events import register
-from wbb.utils import progress
-
+    
 try:
 
     from youtubesearchpython import SearchVideos
